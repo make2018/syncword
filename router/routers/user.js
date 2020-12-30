@@ -10,8 +10,11 @@ router.get('/login',async ctx=>{
 
 //register
 
-router.post('/register',async ctx=>{
-    ctx.body=`register api`
+router.get('/register',async ctx=>{
+    //把register.html页面渲染出来
+   await ctx.render('register',
+   {name:'注册页面'})
+   //ctx.body=`register api`
 })
 
 module.exports=router
