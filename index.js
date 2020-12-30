@@ -4,6 +4,9 @@
 const app=require('./koa')
 const conf=require('./config')
 
+const bodyParser=require('koa-bodyparser')
+
+app.use(bodyParser())
 
 //注：配置ejs模板引擎时，配置的代码一定要放在router配置代码之前
 const views=require('koa-views')
