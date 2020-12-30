@@ -1,11 +1,12 @@
 
 const Koa = require('koa')
 const app = new Koa()
-
 const conf=require('./config')
 
+const router=require('./router')
+
 app.use(ctx=>{
-    ctx.body='hello koa998812221'
+    ctx.body='hello koa9988'
 })
 
 
