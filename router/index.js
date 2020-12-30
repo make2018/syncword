@@ -1,8 +1,16 @@
 const user=require('./routers/user')
+const app=require('../koa')
 const readDir=require('require-directory')
+const Router = require('koa-router')
 
 
 const visitor=(obj)=>{
+
+    if(obj instanceof Router){
+
+        app.use(obj.routes())
+    }
+
     console.log(obj)
 }
 
